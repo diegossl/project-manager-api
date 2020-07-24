@@ -14,7 +14,9 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "pg": "^8.3.0",
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.2",
