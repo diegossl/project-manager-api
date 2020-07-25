@@ -6,6 +6,8 @@ const logger = require('morgan')
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
 
+require('./database')
+
 const app = express()
 
 app.set('views', path.join(__dirname, 'views'))
