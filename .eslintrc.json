@@ -1,15 +1,17 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2020": true
-    },
-    "extends": [
-        "standard"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 11
-    },
-    "rules": {
-    }
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2020": true
+  },
+  "extends": [
+    "standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 11
+  },
+  "rules": {
+    "no-useless-constructor": "off",
+    "handle-callback-err": "off"
+  }
 }
