@@ -7,6 +7,6 @@ const AuthController = require('../app/controllers/AuthController')
 const router = express.Router()
 
 router.post('/user/register', verifySignUp, UserController.store)
-router.post('/user/login', verifyToken, AuthController.login)
+router.post('/user/login', AuthController.login)
 
 module.exports = router

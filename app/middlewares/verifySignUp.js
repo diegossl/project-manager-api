@@ -6,7 +6,7 @@ module.exports = {
     const user = await User.findOne({ where: { email: email } })
 
     if (user) {
-      return response.status(400).send({ message: 'Failed! Email is already in use!' })
+      return response.status(400).send({ message: 'Email is already in use' })
     }
 
     next()
