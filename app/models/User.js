@@ -11,6 +11,10 @@ class User extends Model {
     })
     this.removeAttribute('id')
   }
+
+  static associate (models) {
+    this.belongsToMany(models.Artist, { foreignKey: 'user_id', through: 'users_artists', as: 'artists' })
+  }
 }
 
 module.exports = User

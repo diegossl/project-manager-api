@@ -3,13 +3,17 @@ const { Model, DataTypes } = require('sequelize')
 class Album extends Model {
   static init (connection) {
     super.init({
-      email: DataTypes.STRING,
-      username: DataTypes.STRING,
-      password: DataTypes.STRING
+      name: DataTypes.STRING,
+      releaseDate: DataTypes.STRING,
+      totalTracks: DataTypes.INTEGER,
+      spotifyPage: DataTypes.STRING
     }, {
       sequelize: connection
     })
-    this.removeAttribute('id')
+  }
+
+  static associate (models) {
+    this.belongsTo(models.Artist, { foreignKey: 'artist_id', as: 'artist' })
   }
 }
 
