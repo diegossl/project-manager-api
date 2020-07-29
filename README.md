@@ -1,1 +1,1 @@
-# Playlist-CRUD-with-TypeORM-and-PostgreSQL
+# Project Manager with Sequelize and PostgreSQL
