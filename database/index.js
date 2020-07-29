@@ -1,20 +1,14 @@
 const { Sequelize } = require('sequelize')
 const database = require('../config/database')
 const User = require('../app/models/User')
-const Artist = require('../app/models/Artist')
-const Album = require('../app/models/Album')
-const Genre = require('../app/models/Genre')
+const Project = require('../app/models/Project')
 
 const connection = new Sequelize(database)
 
 User.init(connection)
-Artist.init(connection)
-Album.init(connection)
-Genre.init(connection)
+Project.init(connection)
 
 User.associate(connection.models)
-Artist.associate(connection.models)
-Album.associate(connection.models)
-Genre.associate(connection.models)
+Project.associate(connection.models)
 
 module.exports = connection

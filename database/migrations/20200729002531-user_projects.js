@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return await queryInterface.createTable('users_artists', {
+    return await queryInterface.createTable('user_projects', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -16,10 +16,10 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
-      artist_id: {
-        type: Sequelize.INTEGER,
+      project_id: {
+        type: Sequelize.STRING,
         allowNull: false,
-        references: { model: 'artists', key: 'id' },
+        references: { model: 'projects', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
@@ -35,6 +35,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('users_artists')
+    await queryInterface.dropTable('user_projects')
   }
 }
