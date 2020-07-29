@@ -10,14 +10,14 @@ module.exports = {
         allowNull: false
       },
       user_id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: 'users', key: 'email' },
+        references: { model: 'users', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
       project_id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
         references: { model: 'projects', key: 'id' },
         onUpdate: 'CASCADE',

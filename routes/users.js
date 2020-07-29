@@ -1,5 +1,4 @@
 const express = require('express')
-const { verifyToken } = require('../app/middlewares/authJwt')
 const { verifySignUp } = require('../app/middlewares/verifySignUp')
 const UserController = require('../app/controllers/UserController')
 const AuthController = require('../app/controllers/AuthController')

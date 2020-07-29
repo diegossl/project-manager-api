@@ -11,7 +11,10 @@ module.exports = {
       const passwordIsValid = await bcrypt.compare(password, user.password)
 
       if (passwordIsValid) {
-        const token = jwt.sign({ email: email }, auth.secretKey, { expiresIn: '1h' })
+        const token = jwt.sign(
+          { email: email, password: password },
+          auth.secretKey, { expiresIn: '1h' }
+        )
         return response.status(200).send({ token: token })
       }
 

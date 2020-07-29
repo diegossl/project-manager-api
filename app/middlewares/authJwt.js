@@ -15,7 +15,11 @@ module.exports = {
       return response.status(401).send({ message: 'Unauthorized' })
     }
 
+    console.log(result.email)
+    console.log(result.password)
+
     request.body.email = result.email
+    request.body.password = result.password
 
     next()
   }

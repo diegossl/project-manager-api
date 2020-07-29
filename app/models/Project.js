@@ -4,8 +4,8 @@ class Project extends Model {
   static init (connection) {
     super.init({
       name: DataTypes.STRING,
-      description: DataTypes.STRING,
-      deadline: DataTypes.DATE
+      description: DataTypes.TEXT,
+      deadline: DataTypes.STRING
     }, {
       sequelize: connection
     })
