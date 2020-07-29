@@ -9,7 +9,6 @@ class User extends Model {
     }, {
       sequelize: connection
     })
-    // this.removeAttribute('id')
   }
 
   static associate (models) {

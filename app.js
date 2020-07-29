@@ -6,7 +6,6 @@ const cors = require('cors')
 
 const usersRouter = require('./routes/users')
 
-require('dotenv').config()
 require('./database')
 
 const app = express()

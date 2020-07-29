@@ -1,11 +1,11 @@
-const Sequelize = require('sequelize')
-const dbConfig = require('../config/database')
+const { Sequelize } = require('sequelize')
+const database = require('../config/database')
 const User = require('../app/models/User')
 const Artist = require('../app/models/Artist')
 const Album = require('../app/models/Album')
 const Genre = require('../app/models/Genre')
 
-const connection = new Sequelize(dbConfig)
+const connection = new Sequelize(database)
 
 User.init(connection)
 Artist.init(connection)
