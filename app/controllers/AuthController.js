@@ -22,5 +22,9 @@ module.exports = {
     } catch (error) {
       return response.status(500).send('Internal server error')
     }
+  },
+
+  logout (request, response) {
+    return response.status(200).send({ token: null })
   }
 }

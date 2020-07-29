@@ -2,24 +2,19 @@ const jwt = require('jsonwebtoken')
 const auth = require('../../config/auth')
 
 module.exports = {
-  verifyToken (request, response, next) {
-    const token = request.headers.token
-
-    if (!token) {
-      return response.status(403).send({ message: 'No token provided' })
+  async verifyToken (request, response, next) {
+    var credentials = null
+    try {
+      const token = request.headers.token
+      if (!token) {
+        return response.status(400).send({ message: 'No token provided' })
+      }
+      credentials = jwt.verify(token, auth.secretKey)
+    } catch (error) {
+      return response.status(400).send({ message: 'Invalid token' })
     }
 
-    const result = jwt.verify(token, auth.secretKey)
-
-    if (!result) {
-      return response.status(401).send({ message: 'Unauthorized' })
-    }
-
-    console.log(result.email)
-    console.log(result.password)
-
-    request.body.email = result.email
-    request.body.password = result.password
+    request.body.email = credentials.email
 
     next()
   }
