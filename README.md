@@ -26,6 +26,13 @@ yarn start
 
 #### POST [http://localhost:3000/login](http://localhost:3000/login)
 
+```json
+{
+	"email": "exemplo@gmail.com",
+	"password": "exemplo123"
+}
+```
+
 #### GET [http://localhost:3000/logout](http://localhost:3000/login)
 
 ### User
