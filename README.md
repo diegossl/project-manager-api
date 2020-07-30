@@ -22,11 +22,35 @@ yarn start
 
 ## Routes
 
-Base URL: [http://localhost:3000](http://localhost:3000)
+### Authentication
+
+#### POST [http://localhost:3000/login](http://localhost:3000/login)
+
+#### GET [http://localhost:3000/logout](http://localhost:3000/login)
 
 ### User
 
-<span color="#000">GET</span>
+#### GET [http://localhost:3000/user/list](http://localhost:3000/user/list)
+
+#### GET [http://localhost:3000/user/:id](http://localhost:3000/user/)
+
+#### POST [http://localhost:3000/user/register](http://localhost:3000/user/register)
+
+#### PUT [http://localhost:3000/user/update/:id](http://localhost:3000/user/update)
+
+#### DELETE [http://localhost:3000/user/delete/:id](http://localhost:3000/user/delete)
+
+### Project
+
+#### GET [http://localhost:3000/project/list](http://localhost:3000/project/list)
+
+#### GET [http://localhost:3000/project/:id](http://localhost:3000/project/)
+
+#### POST [http://localhost:3000/project/register](http://localhost:3000/project/register)
+
+#### PUT [http://localhost:3000/project/update/:id](http://localhost:3000/usprojecter/update)
+
+#### DELETE [http://localhost:3000/project/delete/:id](http://localhost:3000/project/delete)
 
 ## License
 
