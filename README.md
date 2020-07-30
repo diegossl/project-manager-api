@@ -26,10 +26,10 @@ yarn start
 
 #### POST [http://localhost:3000/login](http://localhost:3000/login)
 
-```json
+```javascript
 {
-	"email": "exemplo@gmail.com",
-	"password": "exemplo123"
+   "email": "exemplo@gmail.com",
+   "password": "exemplo123"
 }
 ```
 
