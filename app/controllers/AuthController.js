@@ -12,7 +12,7 @@ module.exports = {
 
       if (passwordIsValid) {
         const token = jwt.sign(
-          { email: email, password: password },
+          { userId: user.id },
           auth.secretKey, { expiresIn: '1h' }
         )
         return response.status(200).send({ token: token })

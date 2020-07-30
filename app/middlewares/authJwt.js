@@ -14,7 +14,7 @@ module.exports = {
       return response.status(400).send({ message: 'Invalid token' })
     }
 
-    request.body.userEmail = credentials.email
+    request.body.userId = credentials.userId
 
     next()
   }

@@ -4,8 +4,23 @@ const UserProjects = require('../models/UserProjects')
 module.exports = {
   async index (request, response) {
     try {
-      const projects = await Project.findAll()
-      return response.status(200).send(projects)
+      const { userId } = request.body
+      const userProjects = await UserProjects.findAll({ where: { user_id: userId } })
+      const projectsId = userProjects.map((project) => {
+        return project.project_id
+      })
+      const allUserProjects = await Project.findAll({ where: { id: projectsId } })
+      return response.status(200).send(allUserProjects)
+    } catch (error) {
+      return response.status(500).send('Internal server error')
+    }
+  },
+
+  async getProject (request, response) {
+    try {
+      const projectId = request.params.id
+      const project = await Project.findOne({ where: { email: projectId } })
+      return response.status(200).send(project)
     } catch (error) {
       return response.status(500).send('Internal server error')
     }
@@ -13,10 +28,16 @@ module.exports = {
 
   async store (request, response) {
     try {
-      const newProject = request.body
+      const { userId } = request.body
+      const { name, description, deadline } = request.body
+      const newProject = {
+        name: name,
+        description: description,
+        deadline: deadline
+      }
       const project = await Project.create(newProject)
       await UserProjects.create({
-        user_id: request.body.userEmail,
+        user_id: userId,
         project_id: project.id
       })
       return response.status(200).send('Project successsfully registered')
@@ -32,15 +53,14 @@ module.exports = {
       await Project.update(projectData, { where: { id: projectId } })
       return response.status(200).send('Project successsfully updated')
     } catch (error) {
-      console.log(error)
       return response.status(500).send('Internal server error')
     }
   },
 
   async destroy (request, response) {
     try {
-      const project = request.params
-      await Project.destroy({ where: { id: project.id } })
+      const projectId = request.params.id
+      await Project.destroy({ where: { id: projectId } })
       return response.status(200).send('Project successsfully deleted')
     } catch (error) {
       return response.status(500).send('Internal server error')
