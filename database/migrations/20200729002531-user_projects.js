@@ -10,9 +10,9 @@ module.exports = {
         allowNull: false
       },
       user_id: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
-        references: { model: 'users', key: 'id' },
+        references: { model: 'users', key: 'email' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
