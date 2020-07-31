@@ -29,33 +29,33 @@ Now the project is ready to be used from the base route:
 
 ### Authentication
 
-#### POST /login
+**POST** /login
 
-#### GET /logout
+**GET** /logout
 
 ### User
 
-#### GET /user/list
+**GET** /user/list
 
-#### GET /user
+**GET** /user
 
-#### POST /user/register
+**POST** /user/register
 
-#### PUT /user/update
+**PUT** /user/update
 
-#### DELETE /user/delete
+**DELETE** /user/delete
 
 ### Project
 
-#### GET /project/list
+**GET** /project/list
 
-#### GET /project/
+**GET** /project/
 
-#### POST /project/register
+**POST** /project/register
 
-#### PUT /projecter/update
+**PUT** /projecter/update
 
-#### DELETE /project/delete
+**DELETE** /project/delete
 
 
 ## License
