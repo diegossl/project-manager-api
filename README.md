@@ -20,37 +20,42 @@ To execute the project, type the following command in the terminal:
 yarn start
 ```
 
+Now the project is ready to be used from the base route:
+
+[http://localhost:3000](http://localhost:3000)
+
+
 ## Routes
 
 ### Authentication
 
-#### POST [http://localhost:3000/login](http://localhost:3000/login)
+#### POST /login
 
-#### GET [http://localhost:3000/logout](http://localhost:3000/login)
+#### GET /logout
 
 ### User
 
-#### GET [http://localhost:3000/user/list](http://localhost:3000/user/list)
+#### GET /user/list
 
-#### GET [http://localhost:3000/user/:id](http://localhost:3000/user/)
+#### GET /user
 
-#### POST [http://localhost:3000/user/register](http://localhost:3000/user/register)
+#### POST /user/register
 
-#### PUT [http://localhost:3000/user/update/:id](http://localhost:3000/user/update)
+#### PUT /user/update
 
-#### DELETE [http://localhost:3000/user/delete/:id](http://localhost:3000/user/delete)
+#### DELETE /user/delete
 
 ### Project
 
-#### GET [http://localhost:3000/project/list](http://localhost:3000/project/list)
+#### GET /project/list
 
-#### GET [http://localhost:3000/project/:id](http://localhost:3000/project/)
+#### GET /project/
 
-#### POST [http://localhost:3000/project/register](http://localhost:3000/project/register)
+#### POST /project/register
 
-#### PUT [http://localhost:3000/project/update/:id](http://localhost:3000/usprojecter/update)
+#### PUT /projecter/update
 
-#### DELETE [http://localhost:3000/project/delete/:id](http://localhost:3000/project/delete)
+#### DELETE /project/delete
 
 
 ## License
