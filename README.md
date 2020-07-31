@@ -26,13 +26,6 @@ yarn start
 
 #### POST [http://localhost:3000/login](http://localhost:3000/login)
 
-```javascript
-{
-   "email": "exemplo@gmail.com",
-   "password": "exemplo123"
-}
-```
-
 #### GET [http://localhost:3000/logout](http://localhost:3000/login)
 
 ### User
@@ -58,6 +51,7 @@ yarn start
 #### PUT [http://localhost:3000/project/update/:id](http://localhost:3000/usprojecter/update)
 
 #### DELETE [http://localhost:3000/project/delete/:id](http://localhost:3000/project/delete)
+
 
 ## License
 
