@@ -1,6 +1,6 @@
 # Project Manager with Sequelize and PostgreSQL
 
-A project manager to organize all the projects of a user, being able to add, retrieve, change and remove. Just as it is also possible to add and remove collaborators to projects
+A project manager to organize all the projects of a user, being able to add, retrieve, change and remove. Just as it is also possible to add and remove collaborators to projects.
 
 ## Setup
 
@@ -30,33 +30,107 @@ Now the project is ready to be used from the base route:
 ### Authentication
 
 **POST** /login
+```javascript
+{
+   "email": "example@gmail.com",
+   "password": "example123"
+}
+```
 
 **GET** /logout
+```javascript
+{
+   "token": "authenticationToken"
+}
+```
 
 ### User
 
 **GET** /user/list
 
-**GET** /user
+```javascript
+{
+   "token": "authenticationToken"
+}
+```
+**GET** /user/id
+
+```javascript
+{
+   "token": "authenticationToken"
+}
+```
 
 **POST** /user/register
+```javascript
+{
+   "email": "example@gmail.com",
+   "username": "Example",
+   "password": "example123"
+}
+```
+**PUT** /user/update/id
+```javascript
+{
+   "token": "authenticationToken"
+}
+{
+   "email": "example@gmail.com",
+   "username": "Example",
+   "password": "example123"
+}
+```
 
-**PUT** /user/update
-
-**DELETE** /user/delete
+**DELETE** /user/delete/id
+```javascript
+{
+   "token": "authenticationToken"
+}
+```
 
 ### Project
 
 **GET** /project/list
+```javascript
+{
+   "token": "authenticationToken"
+}
+```
 
-**GET** /project/
+**GET** /project/id
+```javascript
+{
+   "token": "authenticationToken"
+}
+```
 
 **POST** /project/register
+```javascript
+{
+   "name": "Project Example",
+   "description": "This is an example of a project",
+   "deadline": "10/08/2025"
+}
+```
 
-**PUT** /projecter/update
+**PUT** /projecter/update/id
+```javascript
+{
+   "token": "authenticationToken"
+}
+{
+   "name": "Project Example",
+   "description": "This is an example of a project",
+   "deadline": "10/08/2025"
+}
+```
 
-**DELETE** /project/delete
-
+**DELETE** /project/delete/id
+```javascript
+{
+   "token": "authenticationToken"
+}
+```
 
 ## License
 
