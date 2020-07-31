@@ -20,12 +20,9 @@ To execute the project, type the following command in the terminal:
 yarn start
 ```
 
-Now the project is ready to be used from the base route:
-
-[http://localhost:3000](http://localhost:3000)
-
-
 ## Routes
+
+**Base URL** [http://localhost:3000](http://localhost:3000)
 
 In all routes that require the authentication token, it must be sent in the request header.
 
