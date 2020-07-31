@@ -1,6 +1,6 @@
 # Project Manager with Sequelize and PostgreSQL
 
-A project manager to organize all the projects of a user and also all users related to each project.
+A project manager to organize all the projects of a user, being able to add, retrieve, change and remove. Just as it is also possible to add and remove collaborators to projects
 
 ## Setup
 
