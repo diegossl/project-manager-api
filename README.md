@@ -27,6 +27,8 @@ Now the project is ready to be used from the base route:
 
 ## Routes
 
+In all routes that require the authentication token, it must be sent in the request header.
+
 ### Authentication
 
 **POST** /login
